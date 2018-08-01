@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		224A5C0E28C0616CA8FADF26 /* Pods_Radius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D78C44502AB8332F1842BA /* Pods_Radius.framework */; };
 		CF3798A2210F6DD500EF2415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3798A1210F6DD500EF2415 /* AppDelegate.swift */; };
 		CF3798A4210F6DD500EF2415 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3798A3210F6DD500EF2415 /* FirstViewController.swift */; };
 		CF3798A6210F6DD500EF2415 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3798A5210F6DD500EF2415 /* SecondViewController.swift */; };
 		CF3798A9210F6DD500EF2415 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3798A7210F6DD500EF2415 /* Main.storyboard */; };
 		CF3798AB210F6DD700EF2415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3798AA210F6DD700EF2415 /* Assets.xcassets */; };
 		CF3798AE210F6DD700EF2415 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3798AC210F6DD700EF2415 /* LaunchScreen.storyboard */; };
+		CF83063B21113DC800C46077 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = CF83063A21113DC800C46077 /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28D78C44502AB8332F1842BA /* Pods_Radius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Radius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF37989E210F6DD500EF2415 /* Radius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3798A1210F6DD500EF2415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF3798A3210F6DD500EF2415 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		CF3798AA210F6DD700EF2415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF3798AD210F6DD700EF2415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF3798AF210F6DD700EF2415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF83063A21113DC800C46077 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		FC1AC5D1D914C7CFDECDEF14 /* Pods-Radius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radius.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Radius/Pods-Radius.debug.xcconfig"; sourceTree = "<group>"; };
+		FF5A9FC5E69A9B4F3F86D3B9 /* Pods-Radius.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radius.release.xcconfig"; path = "Pods/Target Support Files/Pods-Radius/Pods-Radius.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224A5C0E28C0616CA8FADF26 /* Pods_Radius.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C14E3649B56C08F49B853EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28D78C44502AB8332F1842BA /* Pods_Radius.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7DACA03A1F87A502144DA32 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC1AC5D1D914C7CFDECDEF14 /* Pods-Radius.debug.xcconfig */,
+				FF5A9FC5E69A9B4F3F86D3B9 /* Pods-Radius.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CF379895210F6DD500EF2415 = {
 			isa = PBXGroup;
 			children = (
 				CF3798A0210F6DD500EF2415 /* Radius */,
 				CF37989F210F6DD500EF2415 /* Products */,
+				B7DACA03A1F87A502144DA32 /* Pods */,
+				4C14E3649B56C08F49B853EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +82,7 @@
 		CF3798A0210F6DD500EF2415 /* Radius */ = {
 			isa = PBXGroup;
 			children = (
+				CF83063A21113DC800C46077 /* awsconfiguration.json */,
 				CF3798A1210F6DD500EF2415 /* AppDelegate.swift */,
 				CF3798A3210F6DD500EF2415 /* FirstViewController.swift */,
 				CF3798A5210F6DD500EF2415 /* SecondViewController.swift */,
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF3798B2210F6DD700EF2415 /* Build configuration list for PBXNativeTarget "Radius" */;
 			buildPhases = (
+				ADB8E8A057EAF5B844AC44B9 /* [CP] Check Pods Manifest.lock */,
 				CF37989A210F6DD500EF2415 /* Sources */,
 				CF37989B210F6DD500EF2415 /* Frameworks */,
 				CF37989C210F6DD500EF2415 /* Resources */,
+				7D7D3B30E04E6F13CE49A222 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF83063B21113DC800C46077 /* awsconfiguration.json in Resources */,
 				CF3798AE210F6DD700EF2415 /* LaunchScreen.storyboard in Resources */,
 				CF3798AB210F6DD700EF2415 /* Assets.xcassets in Resources */,
 				CF3798A9210F6DD500EF2415 /* Main.storyboard in Resources */,
@@ -132,6 +162,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D7D3B30E04E6F13CE49A222 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Radius/Pods-Radius-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthUI/AWSAuthUI.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSFacebookSignIn/AWSFacebookSignIn.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthUI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSFacebookSignIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Radius/Pods-Radius-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADB8E8A057EAF5B844AC44B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Radius-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CF37989A210F6DD500EF2415 /* Sources */ = {
@@ -282,6 +371,7 @@
 		};
 		CF3798B3210F6DD700EF2415 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC1AC5D1D914C7CFDECDEF14 /* Pods-Radius.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +389,7 @@
 		};
 		CF3798B4210F6DD700EF2415 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF5A9FC5E69A9B4F3F86D3B9 /* Pods-Radius.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
