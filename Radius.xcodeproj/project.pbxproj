@@ -15,6 +15,15 @@
 		CF3798AB210F6DD700EF2415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3798AA210F6DD700EF2415 /* Assets.xcassets */; };
 		CF3798AE210F6DD700EF2415 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3798AC210F6DD700EF2415 /* LaunchScreen.storyboard */; };
 		CF83063B21113DC800C46077 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = CF83063A21113DC800C46077 /* awsconfiguration.json */; };
+		CFE0AB1B211257FA008F2FD4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE0AB1A211257FA008F2FD4 /* CoreLocation.framework */; };
+		CFE0AB1D21125806008F2FD4 /* AWSAuthCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE0AB1C21125806008F2FD4 /* AWSAuthCore.framework */; };
+		CFE0AB1F21125806008F2FD4 /* AWSAuthUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE0AB1E21125806008F2FD4 /* AWSAuthUI.framework */; };
+		CFE0AB2121125806008F2FD4 /* AWSCognitoIdentityProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE0AB2021125806008F2FD4 /* AWSCognitoIdentityProvider.framework */; };
+		CFE0AB2321125806008F2FD4 /* AWSCognitoIdentityProviderASF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE0AB2221125806008F2FD4 /* AWSCognitoIdentityProviderASF.framework */; };
+		CFE0AB2521125806008F2FD4 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE0AB2421125806008F2FD4 /* AWSCore.framework */; };
+		CFE0AB2721125806008F2FD4 /* AWSMobileClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE0AB2621125806008F2FD4 /* AWSMobileClient.framework */; };
+		CFE0AB2921125806008F2FD4 /* AWSPinpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE0AB2821125806008F2FD4 /* AWSPinpoint.framework */; };
+		CFE0AB2B21125806008F2FD4 /* AWSUserPoolsSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFE0AB2A21125806008F2FD4 /* AWSUserPoolsSignIn.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,15 @@
 		CF3798AD210F6DD700EF2415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF3798AF210F6DD700EF2415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF83063A21113DC800C46077 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		CFE0AB1A211257FA008F2FD4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CFE0AB1C21125806008F2FD4 /* AWSAuthCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSAuthCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE0AB1E21125806008F2FD4 /* AWSAuthUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSAuthUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE0AB2021125806008F2FD4 /* AWSCognitoIdentityProvider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCognitoIdentityProvider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE0AB2221125806008F2FD4 /* AWSCognitoIdentityProviderASF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCognitoIdentityProviderASF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE0AB2421125806008F2FD4 /* AWSCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE0AB2621125806008F2FD4 /* AWSMobileClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSMobileClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE0AB2821125806008F2FD4 /* AWSPinpoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSPinpoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFE0AB2A21125806008F2FD4 /* AWSUserPoolsSignIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AWSUserPoolsSignIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC1AC5D1D914C7CFDECDEF14 /* Pods-Radius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radius.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Radius/Pods-Radius.debug.xcconfig"; sourceTree = "<group>"; };
 		FF5A9FC5E69A9B4F3F86D3B9 /* Pods-Radius.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radius.release.xcconfig"; path = "Pods/Target Support Files/Pods-Radius/Pods-Radius.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,6 +55,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFE0AB1D21125806008F2FD4 /* AWSAuthCore.framework in Frameworks */,
+				CFE0AB1F21125806008F2FD4 /* AWSAuthUI.framework in Frameworks */,
+				CFE0AB2121125806008F2FD4 /* AWSCognitoIdentityProvider.framework in Frameworks */,
+				CFE0AB2321125806008F2FD4 /* AWSCognitoIdentityProviderASF.framework in Frameworks */,
+				CFE0AB2521125806008F2FD4 /* AWSCore.framework in Frameworks */,
+				CFE0AB2721125806008F2FD4 /* AWSMobileClient.framework in Frameworks */,
+				CFE0AB2921125806008F2FD4 /* AWSPinpoint.framework in Frameworks */,
+				CFE0AB2B21125806008F2FD4 /* AWSUserPoolsSignIn.framework in Frameworks */,
+				CFE0AB1B211257FA008F2FD4 /* CoreLocation.framework in Frameworks */,
 				224A5C0E28C0616CA8FADF26 /* Pods_Radius.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +74,15 @@
 		4C14E3649B56C08F49B853EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CFE0AB1C21125806008F2FD4 /* AWSAuthCore.framework */,
+				CFE0AB1E21125806008F2FD4 /* AWSAuthUI.framework */,
+				CFE0AB2021125806008F2FD4 /* AWSCognitoIdentityProvider.framework */,
+				CFE0AB2221125806008F2FD4 /* AWSCognitoIdentityProviderASF.framework */,
+				CFE0AB2421125806008F2FD4 /* AWSCore.framework */,
+				CFE0AB2621125806008F2FD4 /* AWSMobileClient.framework */,
+				CFE0AB2821125806008F2FD4 /* AWSPinpoint.framework */,
+				CFE0AB2A21125806008F2FD4 /* AWSUserPoolsSignIn.framework */,
+				CFE0AB1A211257FA008F2FD4 /* CoreLocation.framework */,
 				28D78C44502AB8332F1842BA /* Pods_Radius.framework */,
 			);
 			name = Frameworks;
@@ -176,12 +212,9 @@
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
-				"${BUILT_PRODUCTS_DIR}/AWSFacebookSignIn/AWSFacebookSignIn.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSPinpoint/AWSPinpoint.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
-				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
-				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -190,12 +223,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSFacebookSignIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPinpoint.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -6,13 +6,16 @@
 //  Copyright © 2018 Rainy Vibes. All rights reserved.
 //
 
+import AWSCore
+import AWSPinpoint
 import UIKit
+import AWSAuthCore
+import AWSAuthUI
 
 class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
