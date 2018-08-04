@@ -12,20 +12,17 @@ import CoreLocation
 
 class FirstViewController: UIViewController, CLLocationManagerDelegate {
 
-    @IBOutlet weak var map: MKMapView!
     let manager = CLLocationManager();
+    @IBOutlet weak var Lat: UILabel!
+    @IBOutlet weak var Lon: UILabel!
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
-        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
-        map.setRegion(region, animated: true)
+        Lat.text = String(location.coordinate.latitude)
+        Lon.text = String(location.coordinate.longitude)
         
         print(location.coordinate)
-        
-        map.showsUserLocation = true
     }
     
     override func viewDidLoad() {
@@ -36,7 +33,6 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
-        print("TEST")
     }
 
 

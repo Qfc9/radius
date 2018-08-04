@@ -7,7 +7,12 @@ header("Content-Type: application/json; charset=UTF-8");
 
 require('db.php');
 
-echo "it works!";
+$location = [$_GET['lat'], $_GET['lon']];
+
+echo "{";
+echo "\"lat\": ", $location[0], ", \"lon\": ", $location[1], "";
+echo "}";
+
 
 
 
