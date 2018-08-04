@@ -11,24 +11,56 @@ import CoreData
 
 // Anaytics imports
 import AWSCore
-import AWSPinpoint
-
 // Auth imports
 import AWSMobileClient
+
+import AWSAuthCore
+import AWSUserPoolsSignIn
+import AWSPinpoint
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//    func application(_ application: UIApplication,
+//                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//        // Override point for customization after application launch.
+//
+//        return true
+//
+//    }
+
+    var pinpoint: AWSPinpoint?
+    //Used for checking whether Push Notification is enabled in Amazon Pinpoint
+    static let remoteNotificationKey = "RemoteNotification"
+    var isInitialized: Bool = false
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
-        return true
-
+        // Register the sign in provider instances with their unique identifier
+        
+        AWSSignInManager.sharedInstance().register(signInProvider: AWSCognitoUserPoolsSignInProvider.sharedInstance())
+        let didFinishLaunching = AWSSignInManager.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        pinpoint = AWSPinpoint(configuration:AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions))
+        if (!isInitialized) {
+            AWSSignInManager.sharedInstance().resumeSession(completionHandler: { (result: Any?, error: Error?) in
+                print("Result: \(result) \n Error:\(error)")
+            })
+            isInitialized = true
+        }
+        return didFinishLaunching
     }
     
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        // print("application application: \(application.description), openURL: \(url.absoluteURL), sourceApplication: \(sourceApplication)")
+        AWSSignInManager.sharedInstance().interceptApplication(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+        isInitialized = true
+        
+        return true
+    }
+
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

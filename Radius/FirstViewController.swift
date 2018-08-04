@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Foundation
 
 class FirstViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -22,7 +23,33 @@ class FirstViewController: UIViewController, CLLocationManagerDelegate {
         Lat.text = String(location.coordinate.latitude)
         Lon.text = String(location.coordinate.longitude)
         
-        print(location.coordinate)
+//        print(location.coordinate)
+        post_gps(latitude:location.coordinate.latitude, longitude:location.coordinate.longitude)
+    }
+    
+    func post_gps(latitude: Double, longitude: Double) {
+        let url = URL(string: "https://secretservice.app/basic.php?lat=\(latitude)&lon=\(longitude)")
+        
+        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            
+            if let data = data {
+                do {
+                    // Convert the data to JSON
+                    let jsonSerialized = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
+                    
+                    if let json = jsonSerialized, let url = json["url"], let explanation = json["explanation"] {
+                        print(url)
+                        print(explanation)
+                    }
+                }  catch let error as NSError {
+                    print(error.localizedDescription)
+                }
+            } else if let error = error {
+                print(error.localizedDescription)
+            }
+        }
+        
+        task.resume()
     }
     
     override func viewDidLoad() {

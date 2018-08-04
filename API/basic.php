@@ -13,6 +13,9 @@ echo "{";
 echo "\"lat\": ", $location[0], ", \"lon\": ", $location[1], "";
 echo "}";
 
+$sql = "INSERT INTO test_gps VALUES(NULL, $location[0], $location[1], 1)";
+
+$dbh->query($sql);
 
 
 
