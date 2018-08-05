@@ -20,6 +20,8 @@ class LoginViewController: UIViewController {
         if AWSSignInManager.sharedInstance().isLoggedIn {
             // GO to user screen
         }
+//        let controller = self.storyboard!.instantiateViewController(withIdentifier: "loggedIn")
+//        self.present(controller, animated: true, completion: nil)
     }
     @IBAction func ButtonTouch(_ sender: Any) {
         let config = AWSAuthUIConfiguration()

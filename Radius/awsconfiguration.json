@@ -4,8 +4,8 @@
     "CredentialsProvider": {
         "CognitoIdentity": {
             "Default": {
-                "PoolId": "us-east-1:ed85bbb9-4496-4e19-8fb3-b4da7c07c9cd",
-                "Region": "us-east-1"
+                "PoolId": "us-east-2:25d1c48d-9618-4a7e-93c5-135ffa36aea5",
+                "Region": "us-east-2"
             }
         }
     },
@@ -14,15 +14,15 @@
     },
     "CognitoUserPool": {
         "Default": {
-            "PoolId": "us-east-1_7Lcw9zcwu",
-            "AppClientId": "5ad3uc9lj4ffkp4thqmlafpokh",
-            "AppClientSecret": "9vh0u0qr85872kput7pq6utvhvfu74jh7ljmq41409k9bis30gk",
-            "Region": "us-east-1"
+            "PoolId": "us-east-2_3LDtq5pFy",
+            "AppClientId": "1qbdkjkile4pbangrvcml0ibaf",
+            "AppClientSecret": "1f6dmqabuialqt5d2q50kjos895ee05dejis5sj2m0bc6kn7h4ar",
+            "Region": "us-east-2"
         }
     },
     "PinpointAnalytics": {
         "Default": {
-            "AppId": "90aaf3c8884a4ff9adc9f0846a6c68ce",
+            "AppId": "fdade2696df14e9fabe5058bd51d29a7",
             "Region": "us-east-1"
         }
     },
