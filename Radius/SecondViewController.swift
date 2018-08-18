@@ -18,20 +18,24 @@ import AWSUserPoolsSignIn
 class SecondViewController: UIViewController {
     
     @IBOutlet weak var usernameLabel: UILabel!
+
+    @IBAction func signOutButton(_ sender: Any) {
+        if (AWSSignInManager.sharedInstance().isLoggedIn) {
+            AWSSignInManager.sharedInstance().logout(completionHandler: {(result: Any?, error: Error?) in
+                let controller = self.storyboard!.instantiateViewController(withIdentifier: "loggedOut")
+                self.present(controller, animated: true, completion: nil)            })
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if !AWSSignInManager.sharedInstance().isLoggedIn {
             //            presentAuthUIViewController()
         }
-        
-        let identityManager = AWSIdentityManager.default()
-        usernameLabel.text = identityManager.identityId
-        
-        let userFromPool = AWSCognitoUserPoolsSignInProvider.sharedInstance().getUserPool().currentUser()
-        
-        print(userFromPool?.username)
 
+        let userFromPool = AWSCognitoUserPoolsSignInProvider.sharedInstance().getUserPool().currentUser()
+
+        usernameLabel.text = userFromPool?.username
         
         userFromPool?.getDetails().continueOnSuccessWith(block: { (task) -> Any? in
             DispatchQueue.main.async {
