@@ -7,26 +7,62 @@
 //
 
 import UIKit
-import AWSMobileClient
+import CoreData
+
+// Anaytics imports
 import AWSCore
+// Auth imports
+import AWSMobileClient
+
+import AWSAuthCore
+import AWSUserPoolsSignIn
+import AWSPinpoint
+import AWSFacebookSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//    func application(_ application: UIApplication,
+//                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//        // Override point for customization after application launch.
+//
+//        return true
+//
+//    }
+
+    var pinpoint: AWSPinpoint?
+    //Used for checking whether Push Notification is enabled in Amazon Pinpoint
+    static let remoteNotificationKey = "RemoteNotification"
+    var isInitialized: Bool = false
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Register the sign in provider instances with their unique identifier
+                
+        AWSSignInManager.sharedInstance().register(signInProvider: AWSCognitoUserPoolsSignInProvider.sharedInstance())
+        AWSSignInManager.sharedInstance().register(signInProvider: AWSFacebookSignInProvider.sharedInstance())
+        let didFinishLaunching = AWSSignInManager.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions: launchOptions)
         
-        // Create AWSMobileClient to connect with AWS
-        AWSDDLog.add(AWSDDTTYLogger.sharedInstance)
-        AWSDDLog.sharedInstance.logLevel = .info
+        pinpoint = AWSPinpoint(configuration:AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions))
+        if (!isInitialized) {
+            AWSSignInManager.sharedInstance().resumeSession(completionHandler: { (result: Any?, error: Error?) in
+                print("Result: \(result) \n Error:\(error)")
+            })
+            isInitialized = true
+        }
+        return didFinishLaunching
+    }
+    
+    
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        // print("application application: \(application.description), openURL: \(url.absoluteURL), sourceApplication: \(sourceApplication)")
+        AWSSignInManager.sharedInstance().interceptApplication(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+        isInitialized = true
         
-        return AWSMobileClient.sharedInstance().interceptApplication(
-            application,
-            didFinishLaunchingWithOptions: launchOptions)
-        
+        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -1,38 +1,38 @@
 {
-  "UserAgent": "MobileHub/1.0",
-  "Version": "1.0",
-  "CredentialsProvider": {
-    "CognitoIdentity": {
-      "Default": {
-        "PoolId": "us-east-1:ed85bbb9-4496-4e19-8fb3-b4da7c07c9cd",
-        "Region": "us-east-1"
-      }
+    "UserAgent": "MobileHub/1.0",
+    "Version": "1.0",
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "us-east-2:25d1c48d-9618-4a7e-93c5-135ffa36aea5",
+                "Region": "us-east-2"
+            }
+        }
+    },
+    "IdentityManager": {
+        "Default": {}
+    },
+    "CognitoUserPool": {
+        "Default": {
+            "PoolId": "us-east-2_3LDtq5pFy",
+            "AppClientId": "1qbdkjkile4pbangrvcml0ibaf",
+            "AppClientSecret": "1f6dmqabuialqt5d2q50kjos895ee05dejis5sj2m0bc6kn7h4ar",
+            "Region": "us-east-2"
+        }
+    },
+    "PinpointAnalytics": {
+        "Default": {
+            "AppId": "fdade2696df14e9fabe5058bd51d29a7",
+            "Region": "us-east-1"
+        }
+    },
+    "PinpointTargeting": {
+        "Default": {
+            "Region": "us-east-1"
+        }
+    },
+    "FacebookSignIn": {
+        "AppId": "2240004642894155",
+        "Permissions": "public_profile"
     }
-  },
-  "IdentityManager": {
-    "Default": {}
-  },
-  "CognitoUserPool": {
-    "Default": {
-      "PoolId": "us-east-1_ciTiG5FK2",
-      "AppClientId": "2rnaacj388727poep5460hjv9d",
-      "AppClientSecret": "1uhb10ke5eegcg54dmcihq3s70mvbqritoo9gom779317hsvou16",
-      "Region": "us-east-1"
-    }
-  },
-  "PinpointAnalytics": {
-    "Default": {
-      "AppId": "90aaf3c8884a4ff9adc9f0846a6c68ce",
-      "Region": "us-east-1"
-    }
-  },
-  "PinpointTargeting": {
-    "Default": {
-      "Region": "us-east-1"
-    }
-  },
-  "FacebookSignIn": {
-    "AppId": "2240004642894155",
-    "Permissions": "public_profile"
-  }
 }
