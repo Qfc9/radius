@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		224A5C0E28C0616CA8FADF26 /* Pods_Radius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D78C44502AB8332F1842BA /* Pods_Radius.framework */; };
+		CF142641212779B10091E5FD /* placeholder_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = CF142640212779B10091E5FD /* placeholder_profile.png */; };
 		CF3798A2210F6DD500EF2415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3798A1210F6DD500EF2415 /* AppDelegate.swift */; };
 		CF3798A4210F6DD500EF2415 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3798A3210F6DD500EF2415 /* FirstViewController.swift */; };
 		CF3798A6210F6DD500EF2415 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3798A5210F6DD500EF2415 /* SecondViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		28D78C44502AB8332F1842BA /* Pods_Radius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Radius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF142640212779B10091E5FD /* placeholder_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_profile.png; sourceTree = "<group>"; };
 		CF37989E210F6DD500EF2415 /* Radius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF3798A1210F6DD500EF2415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF3798A3210F6DD500EF2415 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CF14263F2127795F0091E5FD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CF142640212779B10091E5FD /* placeholder_profile.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		CF379895210F6DD500EF2415 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 		CF3798A0210F6DD500EF2415 /* Radius */ = {
 			isa = PBXGroup;
 			children = (
+				CF14263F2127795F0091E5FD /* images */,
 				CF83063A21113DC800C46077 /* awsconfiguration.json */,
 				CF3798A1210F6DD500EF2415 /* AppDelegate.swift */,
 				CF3798A3210F6DD500EF2415 /* FirstViewController.swift */,
@@ -195,6 +206,7 @@
 			files = (
 				CF83063B21113DC800C46077 /* awsconfiguration.json in Resources */,
 				CF3798AE210F6DD700EF2415 /* LaunchScreen.storyboard in Resources */,
+				CF142641212779B10091E5FD /* placeholder_profile.png in Resources */,
 				CF3798AB210F6DD700EF2415 /* Assets.xcassets in Resources */,
 				CF3798A9210F6DD500EF2415 /* Main.storyboard in Resources */,
 			);
@@ -216,9 +228,13 @@
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSFacebookSignIn/AWSFacebookSignIn.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSPinpoint/AWSPinpoint.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -228,9 +244,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSFacebookSignIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPinpoint.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

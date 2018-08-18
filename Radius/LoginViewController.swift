@@ -12,7 +12,7 @@ import UIKit
 import AWSAuthCore
 import AWSAuthUI
 import AWSMobileClient
-
+import AWSFacebookSignIn
 
 class LoginViewController: UIViewController {
     override func viewDidLoad() {
@@ -20,16 +20,16 @@ class LoginViewController: UIViewController {
         if AWSSignInManager.sharedInstance().isLoggedIn {
             // GO to user screen
         }
-//        let controller = self.storyboard!.instantiateViewController(withIdentifier: "loggedIn")
+//        let controller = self.storyboard!.instantiateViewController(withIdentifier: "loggedIn") 
 //        self.present(controller, animated: true, completion: nil)
     }
     @IBAction func ButtonTouch(_ sender: Any) {
         let config = AWSAuthUIConfiguration()
         config.enableUserPoolsUI = true
-        //        config.addSignInButtonView(class: AWSFacebookSignInButton.self)
+                config.addSignInButtonView(class: AWSFacebookSignInButton.self)
         //        config.addSignInButtonView(class: AWSGoogleSignInButton.self)
         //        config.backgroundColor = UIColor.blue
-        config.font = UIFont (name: "Helvetica Neue", size: 20)
+//        config.font = UIFont (name: "Helvetica Neue", size: 20)
         config.isBackgroundColorFullScreen = true
         config.canCancel = true
         //        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "theView")

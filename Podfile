@@ -16,6 +16,7 @@ target :'Radius' do
       # Auth dependencies
       pod 'AWSUserPoolsSignIn', '~> 2.6.5'
       pod 'AWSAuthUI', '~> 2.6.5'
+      pod 'AWSFacebookSignIn', '~> 2.6.13'
       pod 'AWSMobileClient', '~> 2.6.5'
 
     # other pods
