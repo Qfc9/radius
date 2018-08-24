@@ -20,6 +20,12 @@
             "Region": "us-east-2"
         }
     },
+    "S3TransferUtility": {
+        "Default": {
+            "Bucket": "radius-userfiles-mobilehub-1592979956",
+            "Region": "us-east-2"
+        }
+    },
     "PinpointAnalytics": {
         "Default": {
             "AppId": "fdade2696df14e9fabe5058bd51d29a7",
@@ -29,6 +35,12 @@
     "PinpointTargeting": {
         "Default": {
             "Region": "us-east-1"
+        }
+    },
+    "UserFileManager": {
+        "Default": {
+            "Bucket": "radius-userfiles-mobilehub-1592979956",
+            "Region": "us-east-2"
         }
     },
     "FacebookSignIn": {

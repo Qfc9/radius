@@ -13,6 +13,7 @@ target :'Radius' do
       # Analytics dependency
       pod 'AWSPinpoint', '~> 2.6.5'
       pod 'AWSCognito', '~> 2.6.5'
+      pod 'AWSS3', '~> 2.6.13'
       # Auth dependencies
       pod 'AWSUserPoolsSignIn', '~> 2.6.5'
       pod 'AWSAuthUI', '~> 2.6.5'

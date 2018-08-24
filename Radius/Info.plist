@@ -26,6 +26,79 @@
 	<string>Main</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Show me where you are ;)</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app requires access to the photo library.</string>
+	<key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>amazonaws.com</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionMinimumTLSVersion</key>
+                <string>TLSv1.0</string>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+            <key>amazonaws.com.cn</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionMinimumTLSVersion</key>
+                <string>TLSv1.0</string>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+        </dict>
+    </dict>
+    <key>AWS</key>
+    <dict>
+        <key>CognitoUserPool</key>
+        <dict>
+            <key>Default</key>
+            <dict>
+                <key>CognitoUserPoolId</key>
+                <string>us-east-2_3LDtq5pFy</string>
+                <key>CognitoUserPoolAppClientId</key>
+                <string>1qbdkjkile4pbangrvcml0ibaf</string>
+                <key>Region</key>
+                <string>us-east-2</string>
+                <key>CognitoUserPoolAppClientSecret</key>
+                <string>1f6dmqabuialqt5d2q50kjos895ee05dejis5sj2m0bc6kn7h4ar</string>
+            </dict>
+        </dict>
+        <key>CredentialsProvider</key>
+        <dict>
+            <key>CognitoIdentity</key>
+            <dict>
+                <key>Default</key>
+                <dict>
+                    <key>PoolId</key>
+                    <string>us-east-2:25d1c48d-9618-4a7e-93c5-135ffa36aea5</string>
+                    <key>Region</key>
+                    <string>us-east-2</string>
+                </dict>
+            </dict>
+        </dict>
+        <key>S3TransferManager</key>
+        <dict>
+            <key>Default</key>
+            <dict>
+                <key>Region</key>
+                <string>us-east-2</string>
+            </dict>
+        </dict>
+        <key>S3</key>
+        <dict>
+            <key>Default</key>
+            <dict>
+                <key>Region</key>
+                <string>us-east-2</string>
+            </dict>
+        </dict>
+    </dict>
+
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
